@@ -10,21 +10,21 @@ const TAIL = "soft natural daylight, shallow depth of field, clean bright interi
 
 const JOBS = [
   // [사이트폴더, 슬러그, 프롬프트]
-  ["cplife", "naeil-card", `Photorealistic: an adult studying at a vocational training class, laptop and notebook on a bright modern classroom desk, hands and desk in focus, warm encouraging atmosphere, Korean`],
-  ["cplife", "jeonse-check", `Photorealistic: a person carefully reviewing a housing lease contract document with a pen, small house model and keys on a clean bright desk`],
-  ["cplife", "child-benefit", `Photorealistic: warm family finance concept, a calculator, documents and a piggy bank with a small baby's shoe on a bright desk`],
-  ["website01", "season-clothes", `Photorealistic: neatly folded seasonal knit sweaters and clothes organized in an open drawer, hands folding clothes, bright clean home closet`],
-  ["website01", "sink-drain", `Photorealistic: a clean stainless kitchen sink drain, a box of baking soda and a small cleaning brush beside it, bright tidy kitchen`],
-  ["website01", "wifi", `Photorealistic: a white home wifi router on a wooden shelf, a smartphone showing signal bars nearby, modern bright living room, blurred background`],
-  ["ohhappy-health", "flu-shot", `Photorealistic: a nurse's gloved hands applying a small round bandage to a patient's upper arm after a vaccination, bright clean clinic, gentle and safe atmosphere`],
-  ["ohhappy-health", "seasonal-health", `Photorealistic: a person wearing a cozy scarf holding a warm cup of tea by a window in autumn, healthy relaxed mood, soft light`],
-  ["ohhappy-health", "checkup-skip", `Photorealistic: a health check-up notice paper and a calendar with a red circle mark, a stethoscope on a bright clean desk`],
-  ["successguide", "info-processing", `Photorealistic: a young person studying for an IT certification, laptop with abstract code on screen (no readable text), notebook and coffee on a focused study desk`],
-  ["successguide", "career-desc", `Photorealistic: hands reviewing a printed resume document with a pen, glasses and coffee on a bright modern office desk, top-down view`],
-  ["successguide", "fall-hiring", `Photorealistic: a job seeker preparing applications on a laptop with a planner and calendar, warm autumn window light, determined focused mood`],
-  ["chozworld", "sansevieria", `Photorealistic close-up of a snake plant (Sansevieria) in a modern minimalist ceramic pot on a bright windowsill, tall upright leaves, fresh green interior`],
-  ["chozworld", "fertilizer", `Photorealistic: a hand adding liquid fertilizer into a watering can beside a healthy monstera houseplant, bright green plant-filled interior`],
-  ["chozworld", "season-move", `Photorealistic: two hands holding a potted green houseplant, placing it near a bright window in autumn, cozy warm home interior with plants`],
+  ["cplife", "student-loan", `Photorealistic: a university student reviewing student loan repayment documents at a bright desk, laptop and calculator nearby, calm focused mood`],
+  ["cplife", "move-in-report", `Photorealistic: a person handing over a lease contract and house keys at a bright public office counter, moving boxes blurred in background`],
+  ["cplife", "happy-card", `Photorealistic: a pregnant woman holding a payment card and a hospital appointment paper in a bright clean clinic waiting area, warm hopeful mood`],
+  ["website01", "chuseok-food", `Photorealistic: Korean holiday food leftovers being packed into clear glass containers for the refrigerator, savory pancakes and seasoned vegetables, bright clean kitchen counter`],
+  ["website01", "bedding-care", `Photorealistic: fresh white bedding and pillows being folded on a bed, sunlight through the window, clean airy bedroom`],
+  ["website01", "phone-reset", `Photorealistic: hands holding a smartphone showing a blank settings-like screen (no readable text), a SIM tray tool and memory card on a clean desk`],
+  ["ohhappy-health", "holiday-digest", `Photorealistic: a person resting a hand on the stomach while sitting at a dining table after a heavy meal, warm cup of tea nearby, soft comfortable home mood`],
+  ["ohhappy-health", "infant-checkup", `Photorealistic: a pediatrician measuring a smiling baby's height on an examination table while a parent holds the baby, bright friendly clinic`],
+  ["ohhappy-health", "holiday-clinic", `Photorealistic: a lit hospital emergency entrance at night with a glowing red cross sign area (no readable text), calm clean exterior, blurred city lights`],
+  ["successguide", "exam-eligibility", `Photorealistic: a person checking certification application requirements on a laptop with a printed checklist and diploma folder on a bright study desk`],
+  ["successguide", "salary-nego", `Photorealistic: two people across a bright modern office table during a calm professional discussion, a contract document and pen between them, hands visible`],
+  ["successguide", "career-pivot", `Photorealistic: a person at a desk with two open notebooks and sticky notes planning a career change, laptop and coffee, warm determined mood`],
+  ["chozworld", "pothos", `Photorealistic close-up of a variegated pothos plant with trailing vines cascading from a shelf, bright green and cream leaves, cozy plant-filled interior`],
+  ["chozworld", "pruning", `Photorealistic: hands using small pruning scissors to trim a houseplant stem, cut cuttings on a table, bright botanical home interior`],
+  ["chozworld", "grow-light", `Photorealistic: a modern clip-on plant grow light shining softly over green houseplants on a shelf in a dim winter room, cozy indoor gardening mood`],
 ];
 
 async function genPng(prompt) {
