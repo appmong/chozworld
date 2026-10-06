@@ -9,17 +9,12 @@ const KEY = Buffer.from([...readFileSync(`${ROOT}/.secrets/openai.key`)].filter(
 const TAIL = "soft natural daylight, shallow depth of field, clean bright interior, cozy realistic mood, high detail, no text, no letters, no logo, no watermark";
 
 const JOBS = [
-  // [사이트폴더, 슬러그, 프롬프트]
-  ["cplife", "unemployment-benefit", `Photorealistic: a person filling out employment support paperwork at a bright public employment center counter, laptop and documents, calm hopeful mood`],
-  ["cplife", "rent-tax", `Photorealistic: a desk with a lease contract, a calculator and bank transfer statements, a person organizing receipts for tax filing, bright tidy home office`],
-  ["website01", "boiler-check", `Photorealistic: a hand adjusting a wall-mounted home heating control panel with blank display (no readable text), clean bright utility corner of a Korean apartment`],
-  ["website01", "autumn-produce", `Photorealistic: autumn Korean produce on a wooden kitchen counter, sweet potatoes, apples, pears, napa cabbage and mushrooms, fresh and colorful, bright kitchen`],
-  ["ohhappy-health", "blood-pressure", `Photorealistic: an older adult sitting at a table measuring blood pressure with a home upper-arm monitor, arm resting properly on the table, bright calm living room`],
-  ["ohhappy-health", "second-checkup", `Photorealistic: a doctor and patient reviewing a health screening result paper together at a bright clinic desk, stethoscope nearby, reassuring atmosphere`],
-  ["successguide", "cert-types", `Photorealistic: a person comparing several certificate documents and a laptop on a bright study desk, magnifying glass and notebook, careful examining mood`],
-  ["successguide", "career-gap", `Photorealistic: a person writing in a notebook beside a laptop and a printed resume, thoughtful expression, warm window light, quiet determined mood`],
-  ["chozworld", "rubber-plant", `Photorealistic: a large rubber plant (Ficus elastica) with glossy dark green leaves in a woven basket pot beside a bright window, cozy minimal interior`],
-  ["chozworld", "air-circulation", `Photorealistic: a small white air circulator fan on the floor near a group of green houseplants by an open window, light curtain moving, fresh airy room`],
+  // [사이트폴더, 슬러그, 프롬프트]  — 2026-10-06 회차
+  ["cplife", "energy-voucher", `Photorealistic: an elderly Korean woman in a warm cardigan sitting in a cozy small apartment beside a warm floor heating area, holding a plain card without logos, a gas boiler controller on the wall, winter afternoon light`],
+  ["ohhappy-health", "covid-shot", `Photorealistic: a nurse giving a vaccine injection in the upper arm of a senior man at a bright Korean local clinic, calm and reassuring atmosphere`],
+  ["successguide", "ai-interview", `Photorealistic: a young job candidate in a neat blazer sitting at a desk facing a laptop webcam for an online video interview, ring light, tidy plain wall behind, screen blurred`],
+  ["website01", "condensation", `Photorealistic close-up: water droplets of condensation on the inside of a window glass in a winter morning, a frosty cold view outside blurred, white window frame`],
+  ["chozworld", "calathea", `Photorealistic: a healthy calathea plant with striking patterned leaves in a ceramic pot on a wooden stand in a bright room with indirect light`],
 ];
 
 async function genPng(prompt) {
