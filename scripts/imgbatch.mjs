@@ -9,12 +9,17 @@ const KEY = Buffer.from([...readFileSync(`${ROOT}/.secrets/openai.key`)].filter(
 const TAIL = "soft natural daylight, shallow depth of field, clean bright interior, cozy realistic mood, high detail, no text, no letters, no logo, no watermark";
 
 const JOBS = [
-  // [사이트폴더, 슬러그, 프롬프트]  — 2026-10-06 회차
-  ["cplife", "energy-voucher", `Photorealistic: an elderly Korean woman in a warm cardigan sitting in a cozy small apartment beside a warm floor heating area, holding a plain card without logos, a gas boiler controller on the wall, winter afternoon light`],
-  ["ohhappy-health", "covid-shot", `Photorealistic: a nurse giving a vaccine injection in the upper arm of a senior man at a bright Korean local clinic, calm and reassuring atmosphere`],
-  ["successguide", "ai-interview", `Photorealistic: a young job candidate in a neat blazer sitting at a desk facing a laptop webcam for an online video interview, ring light, tidy plain wall behind, screen blurred`],
-  ["website01", "condensation", `Photorealistic close-up: water droplets of condensation on the inside of a window glass in a winter morning, a frosty cold view outside blurred, white window frame`],
-  ["chozworld", "calathea", `Photorealistic: a healthy calathea plant with striking patterned leaves in a ceramic pot on a wooden stand in a bright room with indirect light`],
+  // [사이트폴더, 슬러그, 프롬프트]  — 2026-10-11 회차
+  ["cplife", "youth-dream-account", `Photorealistic: a young Korean office worker in their late twenties sitting by a window in a small apartment, looking hopefully at a bank savings passbook, a small house-shaped piggy bank on the desk, city apartment buildings outside`],
+  ["cplife", "postpartum-care", `Photorealistic: a kind middle-aged postpartum caregiver gently holding a newborn baby wrapped in a white swaddle in a bright Korean apartment living room, the new mother resting on a sofa smiling`],
+  ["ohhappy-health", "medical-tax", `Photorealistic: a person at a desk sorting pharmacy and hospital receipts next to a calculator and a pair of eyeglasses, papers blurred and unreadable, warm evening light`],
+  ["ohhappy-health", "shingles", `Photorealistic: a doctor consulting with a woman in her late fifties at a clinic desk, discussing a vaccination plan, a vaccine vial and syringe tray on the side, calm reassuring mood`],
+  ["successguide", "sqld", `Photorealistic: a laptop showing a blurred database query editor with table grid results, an open study book and sticky notes on a tidy desk, focused evening study session`],
+  ["successguide", "reference-check", `Photorealistic: a professional woman in an office having a friendly phone call while looking at a laptop, notebook on the desk, bright modern workspace`],
+  ["website01", "kimjang", `Photorealistic: a Korean home kitchen floor prepared for kimchi making, a large basin of salted napa cabbage halves, bowls of red pepper paste seasoning, radish and green onions, rubber gloves, autumn daylight`],
+  ["website01", "two-factor", `Photorealistic: a person holding a smartphone showing a blurred verification code screen beside a laptop login page with a padlock icon, cozy desk, no readable text`],
+  ["chozworld", "hoya", `Photorealistic: a lush hoya plant with thick glossy waxy leaves trailing from a hanging pot by a bright window, clusters of pink star-shaped flowers`],
+  ["chozworld", "fungus-gnats", `Photorealistic close-up: a potted houseplant on a windowsill with a yellow sticky trap inserted in the soil, a few tiny black gnats caught on it, soil surface dry`],
 ];
 
 async function genPng(prompt) {
