@@ -1,12 +1,12 @@
 // 15편 썸네일 배치 생성: OpenAI gpt-image-1 → sharp 1280x720 webp → 각 사이트 public/shots/<slug>/
 // 키는 .secrets/openai.key 에서 읽음(출력 안 함). sharp는 chozworld/node_modules 사용.
 import sharp from "sharp";
+import { style } from "./promptstyle.mjs";
 import { readFileSync, mkdirSync } from "node:fs";
 import { resolve } from "node:path";
 
 const ROOT = "D:/ProjectFolder/claude_project";
 const KEY = Buffer.from([...readFileSync(`${ROOT}/.secrets/openai.key`)].filter((b) => b >= 0x21 && b <= 0x7e)).toString("ascii");
-const TAIL = "soft natural daylight, shallow depth of field, clean bright interior, cozy realistic mood, high detail, no text, no letters, no logo, no watermark";
 
 const JOBS = [
   // [사이트폴더, 슬러그, 프롬프트]  — 2026-10-11 회차
@@ -26,7 +26,7 @@ async function genPng(prompt) {
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ model: "gpt-image-1", prompt: `${prompt}. ${TAIL}`, size: "1536x1024", n: 1 }),
+    body: JSON.stringify({ model: "gpt-image-1", prompt: style(prompt), size: "1536x1024", n: 1 }),
   });
   const j = await res.json();
   if (!res.ok) throw new Error(j?.error?.message || JSON.stringify(j).slice(0, 200));
