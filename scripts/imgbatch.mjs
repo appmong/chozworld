@@ -9,17 +9,22 @@ const ROOT = "D:/ProjectFolder/claude_project";
 const KEY = Buffer.from([...readFileSync(`${ROOT}/.secrets/openai.key`)].filter((b) => b >= 0x21 && b <= 0x7e)).toString("ascii");
 
 const JOBS = [
-  // [사이트폴더, 슬러그, 프롬프트]  — 2026-10-11 회차
-  ["cplife", "youth-dream-account", `Photorealistic: a young Korean office worker in their late twenties sitting by a window in a small apartment, looking hopefully at a bank savings passbook, a small house-shaped piggy bank on the desk, city apartment buildings outside`],
-  ["cplife", "postpartum-care", `Photorealistic: a kind middle-aged postpartum caregiver gently holding a newborn baby wrapped in a white swaddle in a bright Korean apartment living room, the new mother resting on a sofa smiling`],
-  ["ohhappy-health", "medical-tax", `Photorealistic: a person at a desk sorting pharmacy and hospital receipts next to a calculator and a pair of eyeglasses, papers blurred and unreadable, warm evening light`],
-  ["ohhappy-health", "shingles", `Photorealistic: a doctor consulting with a woman in her late fifties at a clinic desk, discussing a vaccination plan, a vaccine vial and syringe tray on the side, calm reassuring mood`],
-  ["successguide", "sqld", `Photorealistic: a laptop showing a blurred database query editor with table grid results, an open study book and sticky notes on a tidy desk, focused evening study session`],
-  ["successguide", "reference-check", `Photorealistic: a professional woman in an office having a friendly phone call while looking at a laptop, notebook on the desk, bright modern workspace`],
-  ["website01", "kimjang", `Photorealistic: a Korean home kitchen floor prepared for kimchi making, a large basin of salted napa cabbage halves, bowls of red pepper paste seasoning, radish and green onions, rubber gloves, autumn daylight`],
-  ["website01", "two-factor", `Photorealistic: a person holding a smartphone showing a blurred verification code screen beside a laptop login page with a padlock icon, cozy desk, no readable text`],
-  ["chozworld", "hoya", `Photorealistic: a lush hoya plant with thick glossy waxy leaves trailing from a hanging pot by a bright window, clusters of pink star-shaped flowers`],
-  ["chozworld", "fungus-gnats", `Photorealistic close-up: a potted houseplant on a windowsill with a yellow sticky trap inserted in the soil, a few tiny black gnats caught on it, soil surface dry`],
+  // [사이트폴더, 슬러그, 프롬프트]  — 2026-10-16 회차(한국인 규칙은 promptstyle.mjs가 자동으로 붙임)
+  ["cplife", "newborn-loan", `Photorealistic: a young couple seen from behind standing in an empty bright new apartment living room, the father holding a baby in a carrier, looking out the large window at the apartment complex, faces not visible`],
+  ["cplife", "work-reduction", `Photorealistic: a parent in office clothes holding hands with an elementary school child walking home together on a quiet apartment complex path in the late afternoon, seen from behind`],
+  ["cplife", "kpass", `Photorealistic: a commuter's hand tapping a plain transit card without logos on a bus card reader inside a city bus in the morning, other passengers blurred`],
+  ["ohhappy-health", "bone-density", `Photorealistic: a woman in her fifties lying on a bone density scanner table in a bright clinic room while a radiographer adjusts the machine, calm and clean`],
+  ["ohhappy-health", "special-copay", `Photorealistic: a hospital billing counter where a family member receives a printed receipt from staff, papers blurred, calm hospital lobby`],
+  ["ohhappy-health", "stroke-signs", `Photorealistic: an older man at a breakfast table holding his arm with a worried expression while his wife beside him is calling on a phone, warm kitchen`],
+  ["successguide", "adsp", `Photorealistic: a study desk with an open statistics textbook, a notebook with hand-drawn charts without letters, a laptop with blurred graphs, evening lamp light`],
+  ["successguide", "public-jobs", `Photorealistic: a job seeker at a library desk browsing job postings on a laptop with a blurred screen, a planner with highlighted dates beside it`],
+  ["successguide", "resignation", `Photorealistic: an office worker packing a small cardboard box with a plant, mug and notebooks at a tidy desk on their last day, seen from the side, face mostly turned away`],
+  ["website01", "humidifier", `Photorealistic: a small white ultrasonic humidifier emitting gentle mist on a wooden shelf in a cozy bedroom in winter, a small hygrometer beside it`],
+  ["website01", "air-fryer", `Photorealistic: an air fryer with its basket pulled out on a clean kitchen counter, golden roasted sweet potatoes and dumplings inside, warm kitchen light`],
+  ["website01", "kids-phone", `Photorealistic: a parent and an elementary school child sitting together on a sofa looking at a smartphone screen, seen from behind over the shoulder, screen blurred`],
+  ["chozworld", "peace-lily", `Photorealistic: a lush peace lily plant with glossy dark green leaves and several white flowers in a ceramic pot in a bright living room corner`],
+  ["chozworld", "leaf-cleaning", `Photorealistic: close-up of hands gently wiping a large monstera leaf with a soft damp cloth, a small bowl of water nearby, bright room`],
+  ["chozworld", "succulent-winter", `Photorealistic: various small succulents in clay pots lined up on a sunny windowsill in winter, frost on the glass outside, warm indoor light`],
 ];
 
 async function genPng(prompt) {
