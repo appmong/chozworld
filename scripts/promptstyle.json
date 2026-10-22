@@ -1,0 +1,5 @@
+{
+  "_comment": "이미지 생성 공통 스타일 (유일한 원본). OpenAI 경로(promptstyle.mjs→imgbatch/bodyimg)와 제미나이 일감 등록(claude_project/imgqueue.py)이 같이 읽는다. 2026-10-14 한국인·한국 배경 규칙, 2026-10-16 음식은 식사 장면일 때만. 2026-10-16 제미나이 테스트에서 식물만 요청했는데 사람이 추가됨 → '장면에 사람이 있을 때만' 문구를 맨 앞에.",
+  "people": "Only include people if the scene description above mentions a person; never add extra people to scenes about objects, plants or places. If people appear, every person is Korean (South Korean, East Asian features). The setting is contemporary South Korea (Korean apartment, Korean clinic, office or street); do not show Western or non-Korean-looking people. Everyday objects match Korean daily life. Only if the scene itself involves food or a meal, show Korean dishes (rice, side dishes, jeon, japchae), never Western holiday food; do not add food to scenes that are not about eating",
+  "look": "soft natural daylight, shallow depth of field, clean bright interior, cozy realistic mood, high detail, no text, no letters, no logo, no watermark"
+}
